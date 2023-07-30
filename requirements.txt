@@ -2,5 +2,3 @@ flask
 nltk
 numpy
 keras
-json
-random
