@@ -1,6 +1,5 @@
 flask
 nltk
-pickle
 numpy
 keras
 json
