@@ -1,17 +1,18 @@
 # start by pulling the python image
 # FROM python:3.11-alpine
-FROM python:3.8
-
-# copy every content from the local file to the image
-COPY . /chatbot
+FROM python:3.9-slim
 
 # switch working directory
-WORKDIR /chatbot
+WORKDIR /app
+
+# copy every content from the local file to the image
+COPY . /app
 
 # install the dependencies and packages in the requirements file
-RUN pip3 install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
+EXPOSE 5000
 # configure the container to run in an executed manner
-ENTRYPOINT [ "python" ]
+# ENTRYPOINT [ "python" ]
 
-CMD ["app.py"]
+CMD ["python", "app.py"]
