@@ -31,7 +31,7 @@ def chat():
 
 def get_Chat_response(text):
     text = text.lower()
-    if text in ["how are you"]:
+    if text in ["how are you", "how are you?"]:
         response = "I'm doing well, thank you. How about you?"
     elif text in ["what's your name", "your name"]:
         response = "I am a chatbot created by stackfire. You can call me PhysicsBuddy."
@@ -47,6 +47,8 @@ def get_Chat_response(text):
         response = "Since I'm an chatbot, I don't have hobbies, but I enjoy helping users like you with information and answering question."
     elif text in ["bye","good bye","take care","see you"]:
         response = "Good Bye Have a nice day"
+    elif text in ["i am fine", "fine", "good", "i am good"]:
+        response = "Oh that's good !!"
     else:
         response = chatbot_response(text)
     return response
@@ -102,11 +104,11 @@ def clean_up_sentence(sentence):
 
     # stem each word - create short form for word
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
-    csentence_words = convert_numbers(sentence_words);
+    sentence_words = convert_numbers(sentence_words)
     return sentence_words
 
 def convert_numbers(words):
-    ordinal = {'first':'1','second':'2','third':'3'}
+    ordinal = {'1st':'1','2nd':'2','3rd':'3'}
     for word in words:
         if word in ordinal.keys():
             words.extend(ordinal[word])
