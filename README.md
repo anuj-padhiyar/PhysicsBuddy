@@ -11,7 +11,7 @@ Welcome to the AI-Powered Physics Buddy Chatbot project! 🌟 this project creat
 I extracted content related to 11th-grade physics using the powerful BeautifulSoup4 library and structured the data in JSON format.
 
 ### 2. Natural Language Processing: 
-To process the JSON data, I performed tokenization, lemmatization, and created a bag-of-words representation of the text using the mltk library. This preprocessing step was crucial for training the chatbot model.
+To process the JSON data, I performed tokenization, lemmatization, and created a bag-of-words representation of the text using the nltk library. This preprocessing step was crucial for training the chatbot model.
 
 ### 3. Model Training: 
 Using the processed data, I trained a deep learning model that employed pattern matching techniques. Keras library was used to build and train the model, which allowed the chatbot to identify patterns in user input and respond accordingly.
